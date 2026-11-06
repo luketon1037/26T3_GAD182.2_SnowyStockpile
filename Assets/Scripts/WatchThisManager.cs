@@ -32,7 +32,7 @@ public class WatchThisManager : MonoBehaviour
     private void ChooseSuspect()
     {
         int randomIndex = Random.Range(0, cover.Length);
-        //cover[randomIndex].SetSuspectActive(true);
+        cover[randomIndex].SetSuspectActive(true);
     }
 
     // When the player clicks on the suspect, this method checks if the suspect is active and if so, the player wins the game
