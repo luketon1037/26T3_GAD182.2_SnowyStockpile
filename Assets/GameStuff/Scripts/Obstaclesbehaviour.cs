@@ -7,22 +7,27 @@ public class Obstaclesbehaviour : MonoBehaviour
 
     [SerializeField] private Rigidbody2D barrierRigidbody;
 
+ 
+
     private void Start()
     {
         barrierRigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     private void Update()
     {
-        // MOVE!!!
-
-        transform.Translate(Vector2.left * _barrierMovementSpeed * Time.deltaTime);
-
-        //
+        MovementSpeed(); //Re-usable btw
 
         if (transform.position.x < _screenExit)
         {
             Destroy(gameObject);
         }
+    }
+    [SerializeField] private void MovementSpeed()
+    {
+        // MOVE!!! // Get a load of this guy
+
+        transform.Translate(Vector2.left * _barrierMovementSpeed * Time.deltaTime);
     }
 }
