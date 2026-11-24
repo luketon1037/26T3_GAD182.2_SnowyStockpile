@@ -7,8 +7,6 @@ public class Obstaclesbehaviour : MonoBehaviour
 
     [SerializeField] private Rigidbody2D barrierRigidbody;
 
- 
-
     private void Start()
     {
         barrierRigidbody = GetComponent<Rigidbody2D>();
@@ -17,6 +15,7 @@ public class Obstaclesbehaviour : MonoBehaviour
 
     private void Update()
     {
+
         MovementSpeed(); //Re-usable btw
 
         if (transform.position.x < _screenExit)

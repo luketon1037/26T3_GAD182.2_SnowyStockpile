@@ -9,7 +9,7 @@ public class TimeScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI RestartUI;
 
     private int kiwiRun = 0;
-    private float scoreTimer = 0f;
+    public float scoreTimer = 0f;
 
     private void Awake()
     {
